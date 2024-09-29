@@ -6,6 +6,6 @@ app_name = 'services'
 
 urlpatterns = [
     path('' , services , name='services'),
-    path('service-detail' , services_detail , name='services-detail'),
+    path('service-details' , services_details , name='services-details'),
     path('quote/' , quote , name='quote'),
 ]

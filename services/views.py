@@ -5,7 +5,7 @@ from django.shortcuts import render
 def services(request):
     return render(request , 'services/services.html')
 
-def services_detail(request):
+def services_details(request):
     return render(request , 'services/service-details.html')
 
 def quote(request):
