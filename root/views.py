@@ -10,7 +10,7 @@ def home(request):
     context = {
         'specials' : Specialservice.objects.filter(status=True)[:3],
         'questions' : FrequentlyQuestions.objects.filter(status=True)[:3],
-        'team' : Team.objects.filter(status=True),
+        'team' : Team.objects.filter(status=True)[:3],
         }
     return render(request , 'root/index.html' , context=context)
 
