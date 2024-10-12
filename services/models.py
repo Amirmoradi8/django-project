@@ -26,16 +26,26 @@ class Skills(models.Model):
 class Team(models.Model):
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     skills = models.ManyToManyField(Skills)
-    descripton = models.TextField()
+    description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=False)
+    instagram = models.CharField(max_length=220 , default='#')
+    telegram = models.CharField(max_length=220 , default='#')
+    # facebook = models.CharField(max_length=220 , default='#')
+    # twitter = models.CharField(max_length=220 , default='#')
+    # linkdin = models.CharField(max_length=220 , default='#')
+
+
 
     class Meta:
         ordering = ['created_at']
 
     def __str__(self):
         return self.user.username
+
+    def truncate_char(self):
+        return str(self.description)[:10]
 
     
     
