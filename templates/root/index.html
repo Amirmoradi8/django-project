@@ -288,7 +288,7 @@
             {% for person in team %}
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                <img src={{person.image.url}} class="testimonial-img" alt="">
                 <h3>{{person.user.get_full_name}}</h3>
                 {% for skill in person.skills.all %}
                 <h4>{{skill.title}}</h4>

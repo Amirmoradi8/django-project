@@ -24,6 +24,7 @@ class Skills(models.Model):
     
 
 class Team(models.Model):
+    image = models.ImageField(upload_to='services' , default='default.jpg')
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     skills = models.ManyToManyField(Skills)
     description = models.TextField()
@@ -34,7 +35,7 @@ class Team(models.Model):
     telegram = models.CharField(max_length=220 , default='#')
     # facebook = models.CharField(max_length=220 , default='#')
     # twitter = models.CharField(max_length=220 , default='#')
-    # linkdin = models.CharField(max_length=220 , default='#')
+    # linkedin = models.CharField(max_length=220 , default='#')
 
 
 
