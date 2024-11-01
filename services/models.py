@@ -15,7 +15,7 @@ class Specialservice(models.Model):
     def __str__(self):
         return self.title
     
-# class Skills(models.Model):    
+# class Skills(models.Model):
 class Skill(models.Model):
     title = models.CharField(max_length=100)
     status = models.BooleanField(default=True)
