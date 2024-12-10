@@ -1,6 +1,12 @@
+altgraph==0.17.4
 asgiref==3.8.1
 Django==5.1.1
+packaging==24.2
+pefile==2023.2.7
 pillow==10.4.0
+pyinstaller==6.11.1
+pyinstaller-hooks-contrib==2024.10
+pywin32-ctypes==0.2.3
 setuptools==65.5.0
 sqlparse==0.5.1
 tzdata==2024.2
