@@ -4,7 +4,8 @@ from .models import Specialservice
 
 # Create your views here.
 
-def services(request):
+# def services(request):
+def services(request , *args , **kwargs):
 # def services(request , category=None):
 #     if category:
         # all_service = Service.objects.filter(category__title=category)
