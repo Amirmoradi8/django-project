@@ -13,10 +13,12 @@ def services(request , *args , **kwargs):
 def services(request , category=None):
     # if category:
         # all_service = Service.objects.filter(category__title=category)
-        if request.GET.get('category') is not None:
+        #if request.GET.get('category') is not None:
+        if category:
         # all_service = Service.objects.filter(category__title=request.GET.get('category'))
             context = {
-            'services' : Service.objects.filter(category__title=request.GET.get('category')),
+            #'services' : Service.objects.filter(category__title=request.GET.get('category')),
+            'services' : Service.objects.filter(category__title=category),
             'specials' : Specialservice.objects.filter(status=True),
         }
         elif request.GET.get('search') is not None:
